@@ -1,0 +1,7 @@
+{
+  "name": "emergent-ts",
+  "description": "TypeScript form controls for building data-rich editing software.",
+  "type": "module",
+  "main": "src/index.ts",
+  "repository": "github:nathan-starkey/emergent-ts"
+}
