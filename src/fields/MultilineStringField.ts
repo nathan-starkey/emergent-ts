@@ -1,7 +1,7 @@
 import Emitter from "../core/Emitter.js";
 import IField from "../core/IField.js";
 
-export default class MultilineStringField extends Emitter<{ change: [field: IField<string>] }> implements IField<string> {
+export default class MultilineStringField extends Emitter<{ change: [field: MultilineStringField] }> implements IField<string> {
   textarea: HTMLTextAreaElement;
 
   constructor() {

@@ -1,7 +1,7 @@
 import Emitter from "../core/Emitter.js";
 import IField from "../core/IField.js";
 
-export default class BooleanField extends Emitter<{ change: [field: IField<boolean>] }> implements IField<boolean> {
+export default class BooleanField extends Emitter<{ change: [field: BooleanField] }> implements IField<boolean> {
   select: HTMLSelectElement;
 
   constructor() {

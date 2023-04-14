@@ -1,7 +1,7 @@
 import Emitter from "../core/Emitter.js";
 import IField from "../core/IField.js";
 
-export default class NumberField extends Emitter<{ change: [field: IField<number>] }> implements IField<number> {
+export default class NumberField extends Emitter<{ change: [field: NumberField] }> implements IField<number> {
   input: HTMLInputElement;
 
   constructor() {

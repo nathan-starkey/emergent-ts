@@ -1,7 +1,7 @@
 import Emitter from "../core/Emitter.js";
 import IField from "../core/IField.js";
 
-export default class EnumField extends Emitter<{ change: [field: IField<string>] }> implements IField<string> {
+export default class EnumField extends Emitter<{ change: [field: EnumField] }> implements IField<string> {
   select: HTMLSelectElement;
 
   constructor(options: string[]) {

@@ -1,7 +1,7 @@
 import Emitter from "../core/Emitter.js";
 import IField from "../core/IField.js";
 
-export default class FieldGroup<T extends Record<string, any>> extends Emitter<{ change: [field: IField<T>] }> implements IField<T> {
+export default class FieldGroup<T extends Record<string, any>> extends Emitter<{ change: [field: FieldGroup<T>] }> implements IField<T> {
   table: HTMLTableElement;
   fields: { [U in keyof T]: IField<T[U]> };
 
