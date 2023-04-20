@@ -3,5 +3,9 @@
   "description": "TypeScript form controls for building data-rich editing software.",
   "type": "module",
   "main": "src/index.ts",
-  "repository": "github:nathan-starkey/emergent-ts"
+  "repository": "github:nathan-starkey/emergent-ts",
+  "scripts": {
+    "build": "tsc",
+    "build-watch": "tsc --watch"
+  }
 }

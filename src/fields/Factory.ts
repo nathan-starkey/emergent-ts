@@ -6,22 +6,26 @@ import MultilineStringField from "./MultilineStringField.js";
 import NumberField from "./NumberField.js";
 import StringField from "./StringField.js";
 
-export function boolean() {
-  return new BooleanField();
-}
+export default class Factory {
+  static boolean() {
+    return new BooleanField();
+  }
 
-export function list(options: string[]) {
-  return new EnumField(options);
-}
+  static list(options: string[]) {
+    return new EnumField(options);
+  }
 
-export function group(fields: { [x: string]: IField<any>; } & { [x: symbol]: string | Node; }) {
-  return new FieldGroup(fields);
-}
+  static group(fields: { [x: string]: IField<any>; } & { [x: symbol]: string | Node; }) {
+    return new FieldGroup(fields);
+  }
 
-export function number() {
-  return new NumberField();
-}
+  static number() {
+    return new NumberField();
+  }
 
-export function string(multiline: boolean = false) {
-  return multiline ? new MultilineStringField() : new StringField();
+  static string(multiline: boolean = false) {
+    return multiline
+      ? new MultilineStringField()
+      : new StringField();
+  }
 }

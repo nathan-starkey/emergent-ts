@@ -1,10 +1,8 @@
-import {
-  group,
-  boolean,
-  number,
-  string,
-  list
-} from "../build/index.js";
+import { Fields } from "../build/index.js";
+
+const {
+  string, number, list, boolean, group
+} = Fields.Factory;
 
 let btn = document.createElement("button");
 btn.innerText = "Read value";
